@@ -1,6 +1,5 @@
 #pragma once
 
-
 //============================================================
 // アプリケーションクラス
 //	APP.～ でどこからでもアクセス可能
@@ -34,12 +33,21 @@ private:
 	// アプリケーション初期化
 	bool Init(int w, int h);
 
+	bool InitMenus();
+	bool InitImages();
+	bool InitBackTex();
 	// アプリケーション解放
 	void Release();
 
 	// ゲーム終了フラグ trueで終了する
 	bool		m_endFlag = false;
 
+	std::string m_programmPath;
+	std::string m_documentPath;
+
+	Menu* m_mainMenu;
+
+	KdTexture m_mainMenuBackTex;
 
 //=====================================================
 // シングルトンパターン
@@ -47,7 +55,8 @@ private:
 private:
 	// 
 	Application() {}
-
+	
+	bool CreateDataPath();
 public:
 	static Application &GetInstance(){
 		static Application Instance;

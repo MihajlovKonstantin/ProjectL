@@ -96,4 +96,9 @@
 //===============================================
 #include "System/KdSystem.h"
 
+#include "direct.h"
+#include <shlwapi.h>
+#include <shlobj.h>
+
+#include "Sourse/Menu.h"
 

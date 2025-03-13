@@ -1,5 +1,5 @@
 #pragma once
-
+#include "Pch.h"
 class Scene
 {
 private:
@@ -10,10 +10,11 @@ private:
 	// 行列 ・・・ 座標などの情報
 	Math::Matrix matrix;
 
+	Menu* m_menu;
 public:
 
 	// 初期設定
-	void Init();
+	void Init(Menu* menu = NULL);
 
 	// 解放
 	void Release();

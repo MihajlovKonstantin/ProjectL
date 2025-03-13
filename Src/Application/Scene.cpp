@@ -3,6 +3,7 @@
 
 void Scene::Draw2D()
 {
+	SHADER.m_spriteShader.DrawTex(m_menu->GetBackTexture(), Math::Rectangle(0, 0, 1280, 720));
 	// •¶š—ñ•\¦
 	SHADER.m_spriteShader.DrawString(0, 0, "Hello World", Math::Vector4(1, 1, 0, 1));
 }
@@ -12,10 +13,12 @@ void Scene::Update()
 	
 }
 
-void Scene::Init()
+void Scene::Init(Menu* menu)
 {
 	// ‰æ‘œ‚Ì“Ç‚İ‚İˆ—
 	charaTex.Load("player.png");
+
+	m_menu = menu;
 }
 
 void Scene::Release()
