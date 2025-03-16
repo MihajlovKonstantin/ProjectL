@@ -99,6 +99,7 @@
 #include "direct.h"
 #include <shlwapi.h>
 #include <shlobj.h>
-
+#include "src/GENUMS.h"
+#include"Sourse/Button.h"
 #include "Sourse/Menu.h"
 

@@ -17,7 +17,6 @@ void Scene::Init(Menu* menu)
 {
 	// ‰æ‘œ‚Ì“Ç‚İ‚İˆ—
 	charaTex.Load("player.png");
-
 	m_menu = menu;
 }
 

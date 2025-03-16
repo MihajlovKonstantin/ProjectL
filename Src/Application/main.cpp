@@ -111,7 +111,7 @@ bool Application::InitMenus()
 {
 	if (!m_mainMenu)
 	{
-		Menu* _menu = new Menu();
+		Menu* _menu = new Menu("MainMenu");
 		m_mainMenu = _menu;
 		m_mainMenu->SetBackTexture(&m_mainMenuBackTex);
 	}
@@ -165,6 +165,10 @@ void Application::Release()
 	// ウィンドウ削除
 	m_window.Release();
 
+	{
+		delete m_mainMenu;
+		m_mainMenu = nullptr;
+	}
 }
 
 bool Application::CreateDataPath()
